@@ -4,6 +4,11 @@ Remote **MCP server** che stima la produzione fotovoltaica di un impianto via
 **PVGIS** (Photovoltaic Geographical Information System, Commissione Europea / JRC).
 Gira **dentro Cloudflare** (serverless, sempre acceso, niente Mac acceso).
 
+> Questo connettore è usato dal plugin **valutazione-fv** del marketplace
+> [AI, MAX Plugins](https://github.com/maxturazzini/aimax-marketplace) — materiale
+> didattico dei workshop AI, MAX. La skill recupera da qui la produzione reale di
+> un tetto e la passa al suo script di calcolo ROI.
+
 API PVGIS: pubblica, gratuita, senza key. Worker su Cloudflare: **free tier**
 (100.000 richieste/giorno incluse) — costo atteso **€0**.
 
