@@ -117,8 +117,11 @@ export class PvgisMCP extends McpAgent {
           lon,
           angle,
           aspect,
-          selectrad: 0,
-          optrad: 0,
+          // FIX: selectrad=1 popola l'irraggiamento sul piano inclinato H(i)_m,
+          // horirrad=1 popola quello orizzontale H(h)_m. Con 0 le righe tornano
+          // vuote (null). Verificato sull'API PVGIS v5_3.
+          selectrad: 1,
+          horirrad: 1,
           outputformat: "json",
         });
         const monthlyRaw: PvgisMonthly[] = data?.outputs?.monthly ?? [];
